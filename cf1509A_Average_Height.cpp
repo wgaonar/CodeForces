@@ -18,7 +18,7 @@ void DisplayContainer (const T &container)
 }
 
 // Unary predicate
-bool IsEven (const int& number) {
+bool IsOdd (const int& number) {
   return ((number % 2) != 0);
 }
 
@@ -34,7 +34,7 @@ int main() {
       cin >> height;
       v1.push_back(height);
     }
-    partition(v1.begin(),v1.end(),IsEven);
+    partition(v1.begin(),v1.end(),IsOdd);
     heightsVector.push_back(v1);
   }
 
