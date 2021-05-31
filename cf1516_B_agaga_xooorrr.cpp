@@ -9,43 +9,30 @@
 
 using namespace std;
 
-typedef long long int ll;
-
 int main () {
-  int t;
+  int t; 
   cin >> t;
 
   while (t--) {
-    int n;
+    int n, cum = 0, total = 0, cont = 0;
     cin >> n;
 
-    vector <ll> a(n);
+    vector <int> v(n+1);
 
-    for (auto &item : a) {
-      cin >> item;
+    for (int i = 1; i <= n; i++) {
+      cin >> v[i];
+      cum ^= v[i]; 
     }
 
-    vector <ll> cum(n+1);
-
-    for (ll i = 1; i <= n; ++i) {
-      cum[i] = cum[i-1] ^ a[i];
-      // convert to binary
-      /* 
-        string binary = bitset<32>(cum[i]).to_string();
-        cout << binary << endl; 
-      */
-    }
-
-    bool found = !cum[n];
-    for (ll i = 1; i <=n; ++i) {
-      for (ll j = i + 1; j < n; ++j) {
-        found |= (cum[i] == (cum[i] ^ cum[j]) &&
-                  cum[i] == (cum[j] ^ cum[n]));
-        // cout << "found: " << found << endl;
+    for (int i = 1; i <= n; i++) {
+      total ^= v[i];
+      if (total == cum) {
+        total = 0;
+        cont ++;
       }
     }
 
-    if (found)
+    if (cont > 1 || cum == 0)
       cout <<"YES" << endl;
     else  
       cout << "NO" << endl;
