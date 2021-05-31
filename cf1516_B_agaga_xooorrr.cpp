@@ -21,7 +21,7 @@ int main () {
 
     for (int i = 1; i <= n; i++) {
       cin >> v[i];
-      cum ^= v[i]; 
+      cum ^= v[i];
     }
 
     for (int i = 1; i <= n; i++) {
