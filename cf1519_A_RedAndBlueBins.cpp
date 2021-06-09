@@ -16,16 +16,8 @@ int main () {
     ll r, b, d;
     cin >> r, cin >> b, cin >> d;
 
-    ll difference1, difference2;
-    if (r >= b) {
-      difference1 = r-b;
-      difference2 = b*d;
-    }
-    else {
-      difference1 = b-r;
-      difference2 = r*d;
-    }
-    cout << (difference1<=difference2 ? "YES\n" : "NO\n");
+    ll mi = min(r,b); ll ma = max(r,b); 
+    cout << ((ma-mi <= mi*d) ? "YES\n" : "NO\n");
   }
   return 0;
 }
