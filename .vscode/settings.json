@@ -10,6 +10,12 @@
     "type_traits": "cpp",
     "utility": "cpp",
     "iostream": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "sstream": "cpp",
+    "string": "cpp",
+    "deque": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp"
   }
 }
