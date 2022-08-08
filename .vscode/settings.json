@@ -7,6 +7,14 @@
     "array": "cpp",
     "string_view": "cpp",
     "unordered_map": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "__hash_table": "cpp",
+    "__tree": "cpp",
+    "bitset": "cpp",
+    "initializer_list": "cpp",
+    "set": "cpp",
+    "iterator": "cpp",
+    "utility": "cpp",
+    "iosfwd": "cpp"
   }
 }
